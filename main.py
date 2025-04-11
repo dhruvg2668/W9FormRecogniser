@@ -38,7 +38,7 @@ def process_w9_from_bytes(file_bytes: bytes) -> Dict:
     return extracted_data
 
 
-@app.post("/extract_w9/")
+@app.post("/extract_w9")
 async def extract_w9_data(request: Request):
     try:
         file_bytes = await request.body()
