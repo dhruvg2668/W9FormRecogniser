@@ -33,4 +33,5 @@ async def extract_w9_data(request: Request):
                 extracted_data[key] = value
         return JSONResponse(content={"extracted_data": extracted_data})
     except Exception as e:
+        print("Error occurred:", str(e))
         raise HTTPException(status_code=500, detail=str(e))
